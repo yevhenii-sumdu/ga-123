@@ -1,0 +1,12 @@
+name: CI1
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls
+      - run: echo here ${{ secrets.MY_SECRET }}
